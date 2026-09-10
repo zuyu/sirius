@@ -38,6 +38,7 @@
 #include "op/scan/parquet_gpu_ingestible.hpp"
 #include "op/scan/sirius_gpu_scan_operator.hpp"
 #include "op/scan/sirius_physical_dynamic_filter.hpp"
+#include "op/scan/tae_gpu_ingestible.hpp"
 #include "op/sirius_physical_column_data_scan.hpp"
 #include "op/sirius_physical_concat.hpp"
 #include "op/sirius_physical_delim_join.hpp"
@@ -242,6 +243,37 @@ build_duckdb_native_table_info(sirius::op::sirius_physical_table_scan& scan_op,
   return info;
 }
 
+//! Build a TAE scanner binding for the current generic GPU_SCAN path. The
+//! scanner's bind data remains owned by the CPU plan, so retain a private copy
+//! for metadata workers that can outlive plan conversion.
+std::unique_ptr<sirius::op::scan::tae_ingestible_table_info> build_tae_table_info(
+  sirius::op::sirius_physical_table_scan& scan_op, duckdb::ClientContext& context)
+{
+  if (!scan_op.bind_data) {
+    throw std::runtime_error(
+      "[sirius_physical_plan_generator::build_tae_table_info] tae_scan has no bind data");
+  }
+
+  auto copied_bind_data = scan_op.bind_data->Copy();
+  if (dynamic_cast<tae::TAEScanBindData*>(copied_bind_data.get()) == nullptr) {
+    throw std::runtime_error(
+      "[sirius_physical_plan_generator::build_tae_table_info] tae_scan bind data is not "
+      "TAEScanBindData");
+  }
+
+  auto info       = std::make_unique<sirius::op::scan::tae_ingestible_table_info>();
+  info->bind_data = duckdb::unique_ptr<tae::TAEScanBindData>(
+    static_cast<tae::TAEScanBindData*>(copied_bind_data.release()));
+  info->returned_types = scan_op.returned_types;
+  info->column_ids     = scan_op.column_ids;
+  info->projection_ids = scan_op.projection_ids;
+  info->output_types   = scan_op.types;
+  info->names          = scan_op.names;
+  info->context        = &context;
+  if (scan_op.table_filters) { info->table_filters = scan_op.table_filters->Copy(); }
+  return info;
+}
+
 /**
  * @brief Builds a GPU scan, wrapping it when registered dynamic-filter producers exist
  *
@@ -298,8 +330,7 @@ void require_complete_native_scan_schema(const sirius::op::sirius_physical_table
   }
 }
 
-//! Rewrite a TABLE_SCAN for `seq_scan` / `parquet_scan` / `read_parquet` /
-//! `sirius_read_parquet` (the internal S3 rewrite target): REPLACE the slot with the GPU
+//! Rewrite a TABLE_SCAN for `seq_scan` / parquet scans / `tae_scan`: REPLACE the slot with the GPU
 //! leaf so it inherits the TABLE_SCAN's tree position and stays the source-leaf of the
 //! existing pipeline. Rejects unsupported scan functions and output types without a native cuDF
 //! carrier while plan construction can still trigger transparent CPU fallback.
@@ -337,6 +368,15 @@ void wrap_table_scan_source(
                               scan,
                               op_params,
                               sirius::op::scan::dynamic_filter_apply_mode::membership_masks_only,
+                              sirius_ctx.get());
+    replace_slot = true;
+  } else if (fn == "tae_scan") {
+    // TAE applies its zone-map filters while reading metadata, then evaluates
+    // the complete AST against the decoded batch.
+    leaf         = make_gpu_scan_leaf(build_tae_table_info(scan, context),
+                              scan,
+                              op_params,
+                              sirius::op::scan::dynamic_filter_apply_mode::include_ast_row_masks,
                               sirius_ctx.get());
     replace_slot = true;
   } else {

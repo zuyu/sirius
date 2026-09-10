@@ -21,6 +21,7 @@
 #include <cucascade/cudf/gpu_data_representation.hpp>
 #include <cucascade/cudf/host_data_representation.hpp>
 #include <cucascade/data/representation_converter.hpp>
+#include <data/host_tae_representation_converters.hpp>
 #include <log/logging.hpp>
 
 #include <memory>
@@ -55,6 +56,7 @@ class converter_registry {
     instance_ = std::make_unique<registry_type>();
     cucascade::register_builtin_converters(*instance_);
     sirius::register_compression_converters(*instance_);
+    sirius::register_tae_converters(*instance_);
   }
 
   /**

@@ -259,6 +259,8 @@ set(EXTENSION_SOURCES
     src/scan_manager/late_mat_resolver.cpp
     src/late_mat/multi_source_gather.cu
     src/config.cpp
+    src/data/host_tae_representation.cpp
+    src/data/host_tae_representation_converters.cpp
     src/helper/numeric_narrowing.cpp
     src/helper/type_conversions.cpp
     src/debug_utils.cpp
@@ -346,6 +348,8 @@ set(EXTENSION_SOURCES
     src/op/scan/gpu_ingestible.cpp
     src/op/scan/parquet_gpu_ingestible.cpp
     src/op/scan/duckdb_native_gpu_ingestible.cpp
+    src/op/scan/tae_scan_plan.cpp
+    src/op/scan/tae_gpu_ingestible.cpp
     src/op/dynamic_filter/dynamic_filter_publish_plan.cpp
     src/op/dynamic_filter/dynamic_filter_publisher.cpp
     src/op/dynamic_filter/sirius_dynamic_filter.cpp
@@ -434,6 +438,7 @@ set(EXTENSION_SOURCES
     src/sirius_ffi.cpp
     src/sirius_interface.cpp
     src/sirius_sql_rewrite.cpp
+    src/tae/tae_metadata_parser.cpp
     src/telemetry/batch_telemetry.cpp
     src/telemetry/telemetry_context.cpp
     src/telemetry/memory_context.cpp
@@ -470,6 +475,9 @@ set(CUDA_SOURCES
     src/cuda/scan/strings/dictionary.cu
     src/cuda/scan/strings/fsst.cu
     src/cuda/scan/strings/uncompressed.cu
+    src/cuda/tae/tae_decode_fixed.cu
+    src/cuda/tae/tae_decode_varchar.cu
+    src/cuda/tae/tae_null_mask.cu
     src/cuda/vss/cudf_raft_interop.cu
     src/cuda/vss/brute_force_search.cu
     src/cuda/vss/ivf_flat_index.cu)
@@ -564,6 +572,7 @@ foreach(_target sirius_extension sirius_loadable_extension)
       $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/include>
       $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
       $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/compression/simpatico_codegen/include>
+      $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/tae-scanner/include>
       $<$<BOOL:${SIRIUS_LEGACY_INCLUDE_DIR}>:$<BUILD_INTERFACE:${SIRIUS_LEGACY_INCLUDE_DIR}>>
   )
 
@@ -600,7 +609,10 @@ foreach(_target sirius_extension sirius_loadable_extension)
     telemetry_bridge
     core_functions_extension
     parquet_extension
+    tae_scanner_extension
     simpatico)
+
+  target_link_libraries(${_target} nvcomp)
 
   add_dependencies(${_target} duckdb_static)
 endforeach()
@@ -735,6 +747,7 @@ set(TEST_SOURCES
     test/cpp/integration/test_gpu_execution_order_nulls.cpp
     test/cpp/integration/test_gpu_execution_parquet_nulls.cpp
     test/cpp/integration/test_gpu_execution_semantic_cast_fallback.cpp
+    test/cpp/integration/test_gpu_execution_tae_scan.cpp
     test/cpp/integration/test_parquet_null_predicate_pushdown.cpp
     test/cpp/integration/test_query_lifecycle_slot.cpp
     test/cpp/integration/test_gpu_execution_tpcds_nulls.cpp

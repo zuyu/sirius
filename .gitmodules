@@ -29,3 +29,6 @@
 [submodule "starrocks/brpc"]
 	path = experimental/starrocks/brpc
 	url = https://github.com/apache/brpc
+[submodule "tae-scanner"]
+	path = tae-scanner
+	url = https://github.com/matrixorigin/duckdb-tae-scanner.git

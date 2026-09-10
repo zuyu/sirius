@@ -1132,6 +1132,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-22.1.8-h4922eb0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-tools-21-21.1.8-h3b15d91_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-tools-21.1.8-hb700be7_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.10.0-hee9eb32_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/make-4.4.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/mimalloc-3.2.7-h54a6638_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/mold-2.40.4-h122c784_3.conda
@@ -1282,6 +1283,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-openmp-22.1.8-he40846f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-tools-21-21.1.8-hb2a4a65_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-tools-21.1.8-hfefdfc9_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/lz4-c-1.10.0-hfb11796_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/make-4.4.1-h2a6d0cb_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/mimalloc-3.2.7-h7ac5ae9_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/mold-2.40.4-h4c4c02a_3.conda
@@ -1509,6 +1511,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-22.1.8-h4922eb0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-tools-21-21.1.8-h3b15d91_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-tools-21.1.8-hb700be7_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.10.0-hee9eb32_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/m4-1.4.21-hb03c661_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/make-4.4.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/mimalloc-3.2.7-h54a6638_0.conda
@@ -1735,6 +1738,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-openmp-22.1.8-he40846f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-tools-21-21.1.8-hb2a4a65_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-tools-21.1.8-hfefdfc9_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/lz4-c-1.10.0-hfb11796_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/m4-1.4.21-he30d5cf_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/make-4.4.1-h2a6d0cb_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/mimalloc-3.2.7-h7ac5ae9_0.conda
@@ -1967,6 +1971,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-22.1.8-h4922eb0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-tools-21-21.1.8-h3b15d91_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-tools-21.1.8-hb700be7_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.10.0-hee9eb32_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/m4-1.4.21-hb03c661_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/make-4.4.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/mimalloc-3.2.7-h54a6638_0.conda
@@ -2191,6 +2196,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-openmp-22.1.8-he40846f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-tools-21-21.1.8-hb2a4a65_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/llvm-tools-21.1.8-hfefdfc9_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/lz4-c-1.10.0-hfb11796_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/m4-1.4.21-he30d5cf_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/make-4.4.1-h2a6d0cb_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/mimalloc-3.2.7-h7ac5ae9_0.conda
@@ -3370,6 +3376,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 30512
   timestamp: 1779905082733
@@ -3411,6 +3418,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 24659
   timestamp: 1779898425780
@@ -3462,6 +3470,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     weak:
     - cuda-cudart >=13.3.29,<14.0a0
@@ -3505,6 +3514,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 24626
   timestamp: 1779898435744
@@ -3540,6 +3550,7 @@ packages:
   - gcc_linux-64
   - gxx_linux-64
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 25676
   timestamp: 1779909800772
@@ -3593,6 +3604,7 @@ packages:
   constrains:
   - gcc_impl_linux-64 >=6,<16.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 28672
   timestamp: 1779905232747
@@ -3643,6 +3655,7 @@ packages:
   constrains:
   - gcc_impl_linux-64 >=6,<16.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 34635831
   timestamp: 1779905180976
@@ -3694,6 +3707,7 @@ packages:
   - cuda-nvcc-tools 13.3.33.*
   - sysroot_linux-64 >=2.17,<3.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     strong:
     - cuda-version >=13.3,<14
@@ -3734,6 +3748,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 155824
   timestamp: 1779896401726
@@ -3772,6 +3787,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 39254802
   timestamp: 1779897349474
@@ -3823,6 +3839,7 @@ packages:
   constrains:
   - cuda-nvrtc-static >=13.3.33
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     weak:
     - cuda-nvrtc >=13.3.33,<14.0a0
@@ -3860,6 +3877,7 @@ packages:
   - cuda-version >=13.3,<13.4.0a0
   - libgcc >=12
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 22428462
   timestamp: 1779905092854
@@ -3895,6 +3913,7 @@ packages:
   - cuda-version >=13.3,<13.4.0a0
   - libgcc >=12
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 29720382
   timestamp: 1779905121216
@@ -5461,6 +5480,7 @@ packages:
   - cuda-version >=13.3,<13.4.0a0
   - libnvptxcompiler-dev_linux-64 13.3.33 ha770c72_0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 28446
   timestamp: 1779905221482
@@ -7427,6 +7447,8 @@ packages:
   - python_abi 3.12.* *_cp312
   license: MIT
   license_family: MIT
+  purls:
+  - pkg:pypi/cffi?source=hash-mapping
   run_exports: {}
   size: 315113
   timestamp: 1761203960926
@@ -7813,6 +7835,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 30727
   timestamp: 1779905123621
@@ -7854,6 +7877,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 24782
   timestamp: 1779898439985
@@ -7905,6 +7929,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     weak:
     - cuda-cudart >=13.3.29,<14.0a0
@@ -7948,6 +7973,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 24786
   timestamp: 1779898447855
@@ -7983,6 +8009,7 @@ packages:
   - gcc_linux-aarch64
   - gxx_linux-aarch64
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 25714
   timestamp: 1779909828183
@@ -8039,6 +8066,7 @@ packages:
   constrains:
   - gcc_impl_linux-aarch64 >=6,<16.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 28828
   timestamp: 1779905286580
@@ -8089,6 +8117,7 @@ packages:
   constrains:
   - gcc_impl_linux-aarch64 >=6,<16.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 30810865
   timestamp: 1779905234807
@@ -8142,6 +8171,7 @@ packages:
   - cuda-nvcc-tools 13.3.33.*
   - sysroot_linux-aarch64 >=2.17,<3.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     strong:
     - cuda-version >=13.3,<14
@@ -8187,6 +8217,7 @@ packages:
   constrains:
   - arm-variant * sbsa
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 162658
   timestamp: 1779896429528
@@ -8225,6 +8256,7 @@ packages:
   - libgcc >=14
   - libstdcxx >=14
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 37806494
   timestamp: 1779897383028
@@ -8279,6 +8311,7 @@ packages:
   - arm-variant * sbsa
   - cuda-nvrtc-static >=13.3.33
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     weak:
     - cuda-nvrtc >=13.3.33,<14.0a0
@@ -8316,6 +8349,7 @@ packages:
   - cuda-version >=13.3,<13.4.0a0
   - libgcc >=12
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 21556608
   timestamp: 1779905144993
@@ -8351,6 +8385,7 @@ packages:
   - cuda-version >=13.3,<13.4.0a0
   - libgcc >=12
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 29031580
   timestamp: 1779905175228
@@ -9955,6 +9990,7 @@ packages:
   - cuda-version >=13.3,<13.4.0a0
   - libnvptxcompiler-dev_linux-aarch64 13.3.33 h579c4fd_0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 28657
   timestamp: 1779905274413
@@ -11402,6 +11438,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 1472271
   timestamp: 1779895496841
@@ -11434,6 +11471,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 1481900
   timestamp: 1779895522474
@@ -11463,6 +11501,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 116655
   timestamp: 1779905079263
@@ -11495,6 +11534,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 116665
   timestamp: 1779905122757
@@ -11537,6 +11577,7 @@ packages:
   - cuda-cudart_linux-64
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     weak:
     - cuda-cudart >=13.3.29,<14.0a0
@@ -11584,6 +11625,7 @@ packages:
   - cuda-cudart_linux-aarch64
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports:
     weak:
     - cuda-cudart >=13.3.29,<14.0a0
@@ -11615,6 +11657,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 1126340
   timestamp: 1779898412056
@@ -11647,6 +11690,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 1133087
   timestamp: 1779898428591
@@ -11676,6 +11720,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 206064
   timestamp: 1779898416941
@@ -11708,6 +11753,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 222441
   timestamp: 1779898433566
@@ -11737,6 +11783,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 39968
   timestamp: 1779898421393
@@ -11769,6 +11816,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 41865
   timestamp: 1779898436163
@@ -11816,6 +11864,7 @@ packages:
   constrains:
   - gcc_impl_linux-64 >=6,<16.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 29519
   timestamp: 1779905228399
@@ -11866,6 +11915,7 @@ packages:
   constrains:
   - gcc_impl_linux-aarch64 >=6,<16.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 29717
   timestamp: 1779905282083
@@ -11895,6 +11945,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 28476
   timestamp: 1779905085657
@@ -11927,6 +11978,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 28720
   timestamp: 1779905125664
@@ -12001,6 +12053,7 @@ packages:
   - __cuda >=13
   - cudatoolkit 13.3|13.3.*
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 22083
   timestamp: 1779891651771
@@ -12047,6 +12100,8 @@ packages:
   - python >=3.10
   - typing_extensions >=4.6.0
   license: MIT and PSF-2.0
+  purls:
+  - pkg:pypi/exceptiongroup?source=hash-mapping
   run_exports: {}
   size: 21333
   timestamp: 1763918099466
@@ -12135,6 +12190,7 @@ packages:
   - python >=3.10
   license: Apache-2.0
   license_family: APACHE
+  purls: []
   run_exports: {}
   size: 10354
   timestamp: 1776068852701
@@ -12148,6 +12204,8 @@ packages:
   - importlib-resources >=7.1.0,<7.1.1.0a0
   license: Apache-2.0
   license_family: APACHE
+  purls:
+  - pkg:pypi/importlib-resources?source=hash-mapping
   run_exports: {}
   size: 34809
   timestamp: 1776068839274
@@ -12233,6 +12291,7 @@ packages:
   depends:
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 10959803
   timestamp: 1779905159430
@@ -12265,6 +12324,7 @@ packages:
   - arm-variant * sbsa
   - cuda-version >=13.3,<13.4.0a0
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  purls: []
   run_exports: {}
   size: 10827460
   timestamp: 1779905210530
@@ -12326,6 +12386,8 @@ packages:
   - python
   license: Apache-2.0
   license_family: APACHE
+  purls:
+  - pkg:pypi/packaging?source=hash-mapping
   run_exports: {}
   size: 91574
   timestamp: 1777103621679
@@ -12336,6 +12398,8 @@ packages:
   - python >=3.10
   license: MPL-2.0
   license_family: MOZILLA
+  purls:
+  - pkg:pypi/pathspec?source=hash-mapping
   run_exports: {}
   size: 56559
   timestamp: 1777271601895
@@ -12346,6 +12410,8 @@ packages:
   - python >=3.13.0a0
   license: MIT
   license_family: MIT
+  purls:
+  - pkg:pypi/pip?source=hash-mapping
   run_exports: {}
   size: 1202377
   timestamp: 1780262809860
@@ -12358,6 +12424,8 @@ packages:
   - wheel
   license: MIT
   license_family: MIT
+  purls:
+  - pkg:pypi/pip?source=hash-mapping
   run_exports: {}
   size: 1203173
   timestamp: 1780262795392
@@ -12417,6 +12485,8 @@ packages:
   - pybind11-abi ==11
   license: BSD-3-Clause
   license_family: BSD
+  purls:
+  - pkg:pypi/pybind11?source=hash-mapping
   run_exports: {}
   size: 247963
   timestamp: 1775004608640
@@ -12431,6 +12501,8 @@ packages:
   - pybind11-abi ==11
   license: BSD-3-Clause
   license_family: BSD
+  purls:
+  - pkg:pypi/pybind11-global?source=hash-mapping
   run_exports: {}
   size: 243898
   timestamp: 1775004520432
@@ -12601,6 +12673,8 @@ packages:
   - python
   license: Apache-2.0
   license_family: APACHE
+  purls:
+  - pkg:pypi/scikit-build-core?source=hash-mapping
   run_exports: {}
   size: 223984
   timestamp: 1781724892851
@@ -12628,6 +12702,8 @@ packages:
   - typing_extensions
   - python
   license: MIT
+  purls:
+  - pkg:pypi/setuptools-scm?source=hash-mapping
   run_exports: {}
   size: 28577
   timestamp: 1782401906421
@@ -12682,6 +12758,8 @@ packages:
   - python
   license: MIT
   license_family: MIT
+  purls:
+  - pkg:pypi/tomli?source=hash-mapping
   run_exports: {}
   size: 21561
   timestamp: 1774492402955
@@ -12732,6 +12810,8 @@ packages:
   - typing_extensions >=4.1
   - python
   license: MIT
+  purls:
+  - pkg:pypi/vcs-versioning?source=hash-mapping
   run_exports: {}
   size: 83103
   timestamp: 1782386657516
@@ -12774,6 +12854,8 @@ packages:
   - python >=3.10
   license: MIT
   license_family: MIT
+  purls:
+  - pkg:pypi/wheel?source=hash-mapping
   run_exports: {}
   size: 33491
   timestamp: 1776878563806
